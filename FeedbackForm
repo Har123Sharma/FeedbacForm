@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+
+    .form-container {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      margin-top: 25px;
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>We Value Your Feedback</h2>
+    <p>Dear Customer, thank you for staying with us. Please share your Aadhaar ID and feedback below.</p>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000002B6H6" method="POST">
+
+      <input type="hidden" name="orgid" value="00DgL000002B6H6">
+      <input type="hidden" name="retURL" value="https://har123sharma.github.io/Feedback/Feedbackk.html">
+
+      <!-- Aadhaar ID -->
+      <label for="aadhaar">Aadhaar ID (12 digits only):</label>
+      <input 
+        id="aadhaar" 
+        name="00NgL00000zHdOP" 
+        type="text" 
+        inputmode="numeric" 
+        pattern="^\d{12}$" 
+        maxlength="12" 
+        required 
+        title="Enter a valid 12-digit Aadhaar number (digits only)" 
+      />
+      <div class="note">Only 12-digit numeric Aadhaar ID is allowed. No spaces or letters.</div>
+
+      <!-- Feedback -->
+      <label for="00NgL00000ybHyb">Your Feedback:</label>
+      <textarea id="00NgL00000ybHyb" name="00NgL00000ybHyb" required></textarea>
+
+      <input type="hidden" id="external" name="external" value="1">
+
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>
